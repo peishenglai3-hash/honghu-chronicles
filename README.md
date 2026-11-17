@@ -1,12 +1,14 @@
 # 《红色源代码：洪湖篇》
 
+> **归档状态：** 章节游戏项目归档，保留序章至第四章、PWA 与 Electron 的既有代码基线。2026-11-17 本次整理未重跑构建或游戏回归。
+
 > 以洪湖革命历史为叙事背景的像素风 2D 叙事探索 RPG。玩家通过场景探索、人物对话、物品调查与关键选择，走过从当代实践队到 1927 年洪湖的章节故事。
 
 ## 项目现状
 
-截至 2026-11-05，序章及第一至第四章已集成为连续可玩的游戏闭环，故事从序章进入历史场景，经过各章行动与回返，最终抵达第四章结算和人物画像。项目在浏览器游戏基础上，也集成了 PWA 离线入口与 Electron 桌面壳。
+原项目说明记录截至 2026-11-05，序章及第一至第四章已集成为连续可玩的游戏闭环，故事从序章进入历史场景，经过各章行动与回返，最终抵达第四章结算和人物画像。项目在浏览器游戏基础上，也集成了 PWA 离线入口与 Electron 桌面壳。
 
-> **分支说明：** 当前包含完整章节、PWA 与 Electron 集成的代码基线位于 [feature/pwa-resource-loading](https://github.com/peishenglai3-hash/honghu_game/tree/feature/pwa-resource-loading)。GitHub 默认分支 [main](https://github.com/peishenglai3-hash/honghu_game/tree/main) 仍是较早的代码基线，尚未包含 PWA 与 Electron 集成。下方运行说明以集成分支为准。
+> **分支说明：** 当前包含完整章节、PWA 与 Electron 集成的代码基线位于 [feature/pwa-resource-loading](https://github.com/peishenglai3-hash/honghu-chronicles/tree/feature/pwa-resource-loading)。归档后默认分支指向该完整代码基线；本次归档没有重新验证构建和设备行为。下方运行说明以集成分支为准。
 
 | 篇章 | 主要内容 |
 | --- | --- |
@@ -35,8 +37,8 @@ Phaser 3.90 · Vite 6 · Vue 3 · Pinia · TypeScript · Electron
 
 以下命令使用包含完整集成成果的 feature/pwa-resource-loading 分支：
 
-    git clone -b feature/pwa-resource-loading https://github.com/peishenglai3-hash/honghu_game.git
-    cd honghu_game
+    git clone -b feature/pwa-resource-loading https://github.com/peishenglai3-hash/honghu-chronicles.git
+    cd honghu-chronicles
     npm install
     npm run dev
 
@@ -89,6 +91,6 @@ PWA 预览与对应的自动化检查入口：
 - electron/：Electron 主进程与 preload
 - scripts/：内容、系统、资源与端到端检查脚本
 
-## 许可
+## 许可与资产边界
 
-仓库顶层 LICENSE 采用 MIT 许可。该许可说明不自动覆盖所有图片、音频、视频、字体、商标或第三方素材；再利用具体资源前，请核对其来源和适用授权。
+源代码自本次归档提交起采用 AGPL-3.0-only，见 [LICENSE](LICENSE)。项目维护者有权再授权的原创美术采用 CC BY-SA 4.0，见 [LICENSE-ART.txt](LICENSE-ART.txt) 和独立的 [美术资产归档](https://github.com/peishenglai3-hash/honghu-game-assets)。第三方素材、字体、商标和参考内容仍按各自权利与许可处理。此前 MIT 历史提交继续按当时 MIT 授权生效。
